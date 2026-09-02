@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <!-- Mobile-first viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Will Su - Personal Portfolio Website">
-
     <title>Will Su | Portfolio</title>
 
     <style>
         /* =========================================================
            1. RESET
         ========================================================= */
-
         *,
         *::before,
         *::after {
@@ -22,11 +18,9 @@
             margin: 0;
             padding: 0;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family:
                 Inter,
@@ -37,11 +31,9 @@
                 Helvetica,
                 Arial,
                 sans-serif;
-
             background: #0b0f19;
             color: #f8fafc;
             line-height: 1.6;
-
             /* Prevent horizontal scrolling */
             overflow-x: hidden;
         }
@@ -65,42 +57,32 @@
             font: inherit;
         }
 
-
         /* =========================================================
            2. FLUID CONTAINER
         ========================================================= */
-
         .container {
             width: min(100% - 2rem, 1200px);
             margin-inline: auto;
         }
-
-
         /* =========================================================
            3. FLUID TYPOGRAPHY
         ========================================================= */
-
         h1 {
             font-size: clamp(2.8rem, 12vw, 6.5rem);
             line-height: 0.95;
             letter-spacing: -0.05em;
         }
-
         h2 {
             font-size: clamp(2rem, 7vw, 4rem);
             line-height: 1;
             letter-spacing: -0.04em;
         }
-
         h3 {
             font-size: clamp(1.2rem, 3vw, 1.5rem);
         }
-
         p {
             font-size: clamp(1rem, 2vw, 1.1rem);
         }
-
-
         /* =========================================================
            4. HEADER / NAVIGATION
         ========================================================= */
@@ -110,247 +92,173 @@
             top: 0;
             left: 0;
             width: 100%;
-
             z-index: 1000;
-
             background: rgba(11, 15, 25, 0.82);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
-
         .nav {
             min-height: 4.5rem;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             position: relative;
         }
-
         .logo {
             font-size: 1.4rem;
             font-weight: 800;
             letter-spacing: -0.04em;
             color: #ffffff;
         }
-
         .logo span {
             color: #38bdf8;
         }
-
-
         /* Mobile menu button */
-
         .menu-toggle {
             width: 2.75rem;
             height: 2.75rem;
-
             display: grid;
             place-items: center;
-
             background: transparent;
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 0.6rem;
-
             color: white;
             cursor: pointer;
         }
-
         .menu-icon {
             width: 1.3rem;
             height: 1rem;
-
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-
         .menu-icon span {
             width: 100%;
             height: 2px;
-
             background: white;
             border-radius: 2px;
-
             transition: 0.25s ease;
         }
-
-
         /* Mobile navigation */
-
         .nav-links {
             position: absolute;
-
             top: calc(100% + 0.5rem);
             left: 0;
             right: 0;
-
             padding: 0.75rem;
-
             display: none;
             flex-direction: column;
             gap: 0.25rem;
-
             background: rgba(15, 23, 42, 0.98);
-
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 1rem;
-
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
         }
-
         .nav-links.active {
             display: flex;
         }
-
         .nav-links a {
             display: block;
-
             padding: 0.85rem 1rem;
-
             border-radius: 0.6rem;
-
             color: #cbd5e1;
-
             transition:
                 background 0.2s ease,
                 color 0.2s ease;
         }
-
         .nav-links a:hover,
         .nav-links a:focus-visible {
             background: rgba(56, 189, 248, 0.1);
             color: #38bdf8;
         }
 
-
-        /* =========================================================
-           5. GENERAL SECTIONS
-        ========================================================= */
+        /*General Sections */
 
         section {
             padding-block: clamp(5rem, 12vw, 9rem);
             scroll-margin-top: 4.5rem;
         }
-
         .section-heading {
             margin-bottom: 2.5rem;
         }
-
         .eyebrow {
             display: inline-block;
-
             margin-bottom: 0.75rem;
-
             color: #38bdf8;
-
             font-size: 0.8rem;
             font-weight: 700;
-
             letter-spacing: 0.15em;
             text-transform: uppercase;
         }
-
         .section-description {
             max-width: 650px;
             margin-top: 1rem;
-
             color: #94a3b8;
         }
-
-
-        /* =========================================================
-           6. BUTTONS
-        ========================================================= */
-
+          
+        /*6.Buttons */
         .button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-
             min-height: 3rem;
-
             padding-inline: 1.4rem;
-
             border-radius: 999px;
-
             background: #38bdf8;
             color: #082f49;
-
             font-weight: 700;
-
             transition:
                 transform 0.2s ease,
                 background 0.2s ease;
         }
-
         .button:hover {
             background: #7dd3fc;
             transform: translateY(-2px);
         }
-
         .button-secondary {
             background: transparent;
             color: #e2e8f0;
 
             border: 1px solid #334155;
         }
-
         .button-secondary:hover {
             background: #1e293b;
             color: #ffffff;
         }
 
-
-        /* =========================================================
-           7. HOME / HERO
-        ========================================================= */
-
+        /* HOME HERO */
         .hero {
             min-height: 100svh;
-
             display: grid;
             align-items: center;
-
             padding-top: 7rem;
-
             background:
                 radial-gradient(
                     circle at 80% 20%,
                     rgba(14, 165, 233, 0.18),
                     transparent 35%
                 ),
-
                 radial-gradient(
                     circle at 20% 80%,
                     rgba(59, 130, 246, 0.08),
                     transparent 35%
                 );
         }
-
         .hero-content {
             max-width: 900px;
         }
-
         .hero h1 {
             max-width: 900px;
         }
-
         .hero h1 span {
             color: #38bdf8;
         }
-
         .hero-text {
             max-width: 650px;
-
             margin-top: 1.5rem;
-
             color: #94a3b8;
         }
-
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -358,834 +266,487 @@
 
             margin-top: 2rem;
         }
-
         .hero-tagline {
             margin-top: 3rem;
-
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-
             color: #64748b;
             font-size: 0.9rem;
         }
 
-
-        /* =========================================================
-           8. ABOUT
-        ========================================================= */
+        /*ABOUT */
 
         #about {
             background: #0f172a;
         }
-
         .about-grid {
             display: grid;
             gap: 2rem;
         }
-
         .about-text {
             color: #cbd5e1;
         }
-
         .about-text p + p {
             margin-top: 1rem;
         }
-
         .about-card {
             padding: clamp(1.5rem, 5vw, 2.5rem);
-
             border-radius: 1.25rem;
-
             background:
                 linear-gradient(
                     145deg,
                     rgba(30, 41, 59, 0.9),
                     rgba(15, 23, 42, 0.9)
                 );
-
             border: 1px solid #334155;
         }
-
         .about-card h3 {
             margin-bottom: 1rem;
         }
-
         .about-card p {
             color: #94a3b8;
         }
 
-
-        /* =========================================================
-           9. PORTFOLIO
-        ========================================================= */
+        /*Portfolio*/
 
         .portfolio-grid {
             display: grid;
             gap: 1rem;
         }
-
         .project {
             overflow: hidden;
-
             border-radius: 1rem;
-
             background: #111827;
             border: 1px solid #1e293b;
-
             transition:
                 transform 0.25s ease,
                 border-color 0.25s ease;
         }
-
         .project:hover {
             transform: translateY(-5px);
             border-color: #38bdf8;
         }
-
         .project-image {
             aspect-ratio: 16 / 9;
-
             display: grid;
             place-items: center;
-
             background:
                 linear-gradient(
                     135deg,
                     #0369a1,
                     #0f172a
                 );
-
             color: #ffffff;
-
             font-size: 3rem;
         }
-
         .project-content {
             padding: 1.5rem;
         }
-
         .project-content h3 {
             margin-bottom: 0.5rem;
         }
-
         .project-content p {
             color: #94a3b8;
         }
-
         .project-link {
             display: inline-block;
-
             margin-top: 1rem;
-
             color: #38bdf8;
             font-weight: 700;
         }
 
-
-        /* =========================================================
-           10. SERVICES
-        ========================================================== */
+        /*SERVICES */
 
         #services {
             background: #0f172a;
         }
-
         .services-grid {
             display: grid;
             gap: 1rem;
         }
-
         .service {
             padding: 1.75rem;
-
             border-radius: 1rem;
-
             background: #111827;
             border: 1px solid #1e293b;
-
             transition:
                 transform 0.25s ease,
                 border-color 0.25s ease;
         }
-
         .service:hover {
             transform: translateY(-5px);
             border-color: #38bdf8;
         }
-
         .service-icon {
             width: 3rem;
             height: 3rem;
-
             display: grid;
             place-items: center;
-
             margin-bottom: 1.25rem;
-
             border-radius: 0.75rem;
-
             background: rgba(56, 189, 248, 0.1);
-
             color: #38bdf8;
-
             font-size: 1.4rem;
         }
-
         .service h3 {
             margin-bottom: 0.6rem;
         }
-
         .service p {
             color: #94a3b8;
         }
 
-
-        /* =========================================================
-           11. CONTACT
-        ========================================================== */
-
+        /*Contact */
         .contact {
             max-width: 750px;
         }
-
         .contact-text {
             color: #94a3b8;
             margin-top: 1rem;
         }
-
         .contact-links {
             display: flex;
             flex-wrap: wrap;
             gap: 0.75rem;
-
             margin-top: 2rem;
         }
 
-
-        /* =========================================================
-           12. FOOTER
-        ========================================================== */
+        /*Footer */
 
         footer {
             padding-block: 2rem;
-
             border-top: 1px solid #1e293b;
-
             color: #64748b;
-
             text-align: center;
         }
 
-
-        /* =========================================================
-           13. TABLET
-        ========================================================== */
+        /* TAble */
 
         @media (min-width: 600px) {
-
             .container {
                 width: min(100% - 3rem, 1200px);
             }
-
             .portfolio-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
         }
 
-
-        /* =========================================================
-           14. DESKTOP
-        ========================================================== */
-
+        /*DEsktop */
         @media (min-width: 800px) {
-
             .menu-toggle {
                 display: none;
             }
-
             .nav-links {
                 position: static;
-
                 display: flex;
-
                 flex-direction: row;
-
                 padding: 0;
-
                 background: transparent;
-
                 border: 0;
                 border-radius: 0;
-
                 box-shadow: none;
-
                 gap: 0.25rem;
             }
-
             .nav-links a {
                 padding: 0.5rem 0.8rem;
             }
-
             .about-grid {
                 grid-template-columns: 1.2fr 0.8fr;
-
                 align-items: center;
-
                 gap: clamp(3rem, 8vw, 7rem);
             }
-
             .portfolio-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-
             .services-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-
         }
 
-
-        /* =========================================================
-           15. LARGE SCREENS
-        ========================================================== */
+        /*Large screen */
 
         @media (min-width: 1200px) {
-
             .container {
                 width: min(100% - 4rem, 1200px);
             }
-
         }
 
-
-        /* =========================================================
-           16. REDUCED MOTION
-        ========================================================== */
+        /*Reduced motion */
 
         @media (prefers-reduced-motion: reduce) {
-
             html {
                 scroll-behavior: auto;
             }
-
             *,
             *::before,
             *::after {
                 transition: none !important;
             }
-
         }
-
     </style>
 </head>
 
-
 <body>
-
-    <!-- =========================================================
-         NAVIGATION
-    ========================================================== -->
-
+    <!--Navigation -->
     <header class="site-header">
-
         <div class="container">
-
             <nav class="nav">
-
                 <a href="#home" class="logo">
                     Will<span>Su</span>
                 </a>
-
                 <button
                     class="menu-toggle"
                     id="menuToggle"
                     aria-label="Open navigation menu"
                     aria-expanded="false"
-                    aria-controls="navLinks"
-                >
+                    aria-controls="navLinks">
                     <span class="menu-icon">
                         <span></span>
                         <span></span>
                         <span></span>
                     </span>
                 </button>
-
                 <ul class="nav-links" id="navLinks">
-
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-
             </nav>
-
         </div>
-
     </header>
-
-
-    <!-- =========================================================
-         HOME
-    ========================================================== -->
-
+    <!--Home -->
     <main>
-
         <section id="home" class="hero">
-
             <div class="container">
-
                 <div class="hero-content">
-
-                    <span class="eyebrow">
-                        Welcome to my website
-                    </span>
-
-                    <h1>
-                        Hi, I'm
-                        <span>Will Su.</span>
-                    </h1>
-
+                    <span class="eyebrow">Welcome to my website</span>
+                    <h1>Hi, I'm<span>Will Su.</span></h1>
                     <p class="hero-text">
                         I'm passionate about technology, design, and
                         building useful digital experiences. This is my
                         personal space on the web.
                     </p>
-
                     <div class="hero-buttons">
-
-                        <a
-                            href="#portfolio"
-                            class="button"
-                        >
-                            View My Work
-                        </a>
-
-                        <a
-                            href="#contact"
-                            class="button button-secondary"
-                        >
-                            Contact Me
-                        </a>
-
+                        <a href="#portfolio"  class="button">View My Work</a>
+                        <a href="#contact"  class="button button-secondary">Contact Me</a>
                     </div>
-
                     <div class="hero-tagline">
-
                         <span>● Developer</span>
                         <span>● Creator</span>
                         <span>● Problem Solver</span>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             ABOUT
-        ====================================================== -->
+        <!--ABOUT -->
 
         <section id="about">
-
             <div class="container">
-
                 <div class="section-heading">
-
-                    <span class="eyebrow">
-                        About
-                    </span>
-
-                    <h2>
-                        A little about <span>me.</span>
-                    </h2>
-
+                    <span class="eyebrow">About</span>
+                    <h2>A little about <span>me.</span></h2>
                 </div>
-
-
                 <div class="about-grid">
-
                     <div class="about-text">
-
                         <p>
-                            Hello! I'm Will Su. Welcome to my personal
-                            website.
+                            Hello! I'm Will Su. Welcome to my personalwebsite.
                         </p>
-
                         <p>
                             I enjoy learning new technologies, solving
                             interesting problems, and turning ideas into
                             real projects.
                         </p>
-
                         <p>
                             This website is where I share my work,
                             experience, projects, and the things I'm
                             currently interested in.
                         </p>
-
                     </div>
-
-
                     <div class="about-card">
-
                         <h3>
                             Always learning.
                         </h3>
-
                         <p>
                             Technology changes quickly. I believe in
                             staying curious, experimenting with new ideas,
                             and continuously improving my skills.
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             PORTFOLIO
-        ====================================================== -->
+        <!--Portfolio -->
 
         <section id="portfolio">
-
             <div class="container">
-
                 <div class="section-heading">
-
                     <span class="eyebrow">
                         Portfolio
                     </span>
-
-                    <h2>
-                        Selected <span>work.</span>
-                    </h2>
-
+                    <h2>Selected <span>work.</span></h2>
                     <p class="section-description">
                         A selection of projects I've built and worked on.
                         Replace these examples with your own projects.
                     </p>
-
                 </div>
-
-
                 <div class="portfolio-grid">
-
-
                     <article class="project">
-
                         <div class="project-image">
                             💻
                         </div>
-
                         <div class="project-content">
-
-                            <h3>
-                                Project One
-                            </h3>
-
+                            <h3>Project One</h3>
                             <p>
                                 A description of your project. Explain
                                 what you built and what problem it solves.
                             </p>
-
-                            <a
-                                href="#"
-                                class="project-link"
-                            >
-                                View Project →
-                            </a>
-
+                            <a href="#" class="project-link">View Project → </a>
                         </div>
-
                     </article>
-
-
                     <article class="project">
-
                         <div class="project-image">
                             🚀
                         </div>
-
                         <div class="project-content">
-
                             <h3>
                                 Project Two
                             </h3>
-
                             <p>
                                 Add another project here. You can link
                                 directly to its GitHub repository or
                                 live website.
                             </p>
-
-                            <a
-                                href="#"
-                                class="project-link"
-                            >
-                                View Project →
-                            </a>
-
+                            <a href="#" class="project-link">View Project →</a>
                         </div>
-
                     </article>
-
-
                     <article class="project">
-
                         <div class="project-image">
                             🎨
                         </div>
-
                         <div class="project-content">
-
-                            <h3>
-                                Project Three
-                            </h3>
-
+                            <h3>Project Three</h3>
                             <p>
                                 Showcase another project, experiment,
                                 design, or application you've created.
                             </p>
-
-                            <a
-                                href="#"
-                                class="project-link"
-                            >
-                                View Project →
-                            </a>
-
+                            <a href="#"  class="project-link">View Project →</a>
                         </div>
-
                     </article>
-
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             SERVICES
-        ====================================================== -->
+        <!--Services -->
 
         <section id="services">
-
             <div class="container">
-
                 <div class="section-heading">
-
-                    <span class="eyebrow">
-                        Services
-                    </span>
-
-                    <h2>
-                        What I <span>do.</span>
-                    </h2>
-
+                    <span class="eyebrow">Services</span>
+                    <h2>What I <span>do.</span></h2>
                     <p class="section-description">
                         These are examples of services you can offer.
                         Customize them based on your skills.
                     </p>
-
                 </div>
-
-
                 <div class="services-grid">
-
-
                     <article class="service">
-
                         <div class="service-icon">
                             &lt;/&gt;
                         </div>
-
-                        <h3>
-                            Web Development
-                        </h3>
-
+                        <h3>Web Development</h3>
                         <p>
                             Building responsive, accessible, and
                             modern websites and web applications.
                         </p>
-
                     </article>
 
-
                     <article class="service">
-
                         <div class="service-icon">
                             ✦
                         </div>
-
-                        <h3>
-                            Web Design
-                        </h3>
-
+                        <h3> Web Design</h3>
                         <p>
                             Creating clean and intuitive interfaces
                             focused on usability and great experiences.
                         </p>
-
                     </article>
 
-
                     <article class="service">
-
                         <div class="service-icon">
                             ⚡
                         </div>
-
-                        <h3>
-                            Problem Solving
-                        </h3>
-
+                        <h3>Problem Solving</h3>
                         <p>
                             Turning ideas and technical challenges into
                             practical solutions.
                         </p>
-
                     </article>
-
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             CONTACT
-        ====================================================== -->
+        <!--CONTACT -->
 
         <section id="contact">
-
             <div class="container">
-
                 <div class="contact">
-
-                    <span class="eyebrow">
-                        Contact
-                    </span>
-
-                    <h2>
-                        Let's work <span>together.</span>
-                    </h2>
-
+                    <span class="eyebrow">Contact</span>
+                    <h2>Let's work <span>together.</span></h2>
                     <p class="contact-text">
                         Have a project, idea, or question? Feel free
                         to get in touch.
                     </p>
-
-
                     <div class="contact-links">
-
                         <!-- Replace with your real email -->
-
-                        <a
-                            href="mailto:your@email.com"
-                            class="button"
-                        >
-                            Email Me
-                        </a>
-
-
+                        <a href="mailto:your@email.com"  class="button">Email Me</a>
                         <!-- Replace with your GitHub -->
-
                         <a
                             href="https://github.com/willsuweb"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="button button-secondary"
-                        >
+                            class="button button-secondary">
                             GitHub
                         </a>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
     </main>
-
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================== -->
+    
+    <!--footer -->
 
     <footer>
-
         <div class="container">
-
             <p>
                 © 2026 Will Su. All rights reserved.
             </p>
-
         </div>
-
     </footer>
-
 
     <!-- =========================================================
          MOBILE NAVIGATION JAVASCRIPT
     ========================================================== -->
-
     <script>
-
         const menuToggle = document.getElementById("menuToggle");
         const navLinks = document.getElementById("navLinks");
-
         menuToggle.addEventListener("click", function () {
-
             const isOpen =
                 navLinks.classList.toggle("active");
-
             menuToggle.setAttribute(
                 "aria-expanded",
                 isOpen
             );
-
         });
 
-
         /* Close menu after clicking a navigation link */
-
         document
             .querySelectorAll(".nav-links a")
             .forEach(function (link) {
@@ -1198,12 +759,8 @@
                         "aria-expanded",
                         "false"
                     );
-
                 });
-
             });
-
     </script>
-
 </body>
 </html>
