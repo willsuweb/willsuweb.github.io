@@ -442,6 +442,10 @@
             font-size: 0.9rem;
             font-weight: 600;
         }
+        .form-group sup {
+            color: red;
+            font-size: 1rem;
+        }
         /*input */
         .form-group input, .form-group textarea {
             width: 100%;
@@ -497,6 +501,11 @@
             margin-top: 1rem;
             color: #38bdf8;
             font-size: 0.95rem;
+        }
+        .form-group span {
+            margin-top: 1rem;
+            color: red;
+            font-size: 1rem;
         }
         /*Footer */
 
@@ -813,17 +822,20 @@
                         </p>
                         <form id="contactForm" method="POST" autocomplete >
                             <div class="form-group">
-                                <label for="name">name</label>
+                                <label for="name">Name <sup>*</sup></label>
                                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                <span id="nameError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="email">email</label>
+                                <label for="email">Email <sup>*</sup></label>
                                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <span id="emailError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="message">Message</label>
+                                <label for="message">Message <sup>*</sup></label>
                                 <textarea id="message" name="message" placeholder="Write your message..." required>
                                 </textarea>
+                                <span id="messageError"></span>
                             </div>
                             <button type="submit">Send Message </button>
                         </form>
@@ -833,10 +845,7 @@
             </div>
         </section>
     </main>
-    <script src="./contact.js"></script>
-    
     <!--footer -->
-
     <footer>
         <div class="container">
             <p>
@@ -844,7 +853,7 @@
             </p>
         </div>
     </footer>
-    <script src="./contact.js"></script>
+    <script src="./script.js"></script>
     <!-- =========================================================
          MOBILE NAVIGATION JAVASCRIPT
     ========================================================== -->
