@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "64.46.2.68/contactdata.php", 
+            "https://64.46.2.68/contactdata.php", 
             {
                 method: "POST",
                 headers: {
