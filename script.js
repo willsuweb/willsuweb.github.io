@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "http://64.46.2.68/contactdata.php", 
+            "https://mat-succeed-stands-badly.trycloudflare.com/contactdata.php/contactdata.php", 
             {
                 method: "POST",
                 headers: {
