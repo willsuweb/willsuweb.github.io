@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://cove-levitra-bingo-cell.trycloudflare.com/contactdata.php", 
+            "https://brian-marsh-plan-vii.trycloudflare.com/contactdata.php", 
             {
                 method: "POST",
                 headers: {
