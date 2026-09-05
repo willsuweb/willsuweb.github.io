@@ -35,13 +35,13 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://willsuweb.freepage.cc/contactdata.php", 
+            "64.46.2.68/contactdata.php", 
             {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Content-Type": "application/json",
                 },
-                body: new URLSearchParams(data)
+                body: JSON.stringify(data)
             }
         );
         const resultData = await response.json();
