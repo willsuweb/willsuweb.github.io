@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://integrate-lightning-postcards-savannah.trycloudflare.com/contactdata.php", 
+            "https://constitution-active-ties-next.trycloudflare.com/contactdata.php", 
             {
                 method: "POST",
                 headers: {
