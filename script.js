@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://preparing-expressions-dad-somebody.trycloudflare.com/contactdata.php", 
+            "https://pharmacy-membrane-humanity-noticed.trycloudflare.com/contactdata.php", 
             {
                 method: "POST",
                 headers: {
