@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://attitude-aruba-busy-blues.trycloudflare.com/contactdata.php", 
+            "https://invited-banner-subscriber-jungle.trycloudflare.com/contactdata.php", 
             {
                 method: "POST",
                 headers: {
