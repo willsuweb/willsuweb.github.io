@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://reward-rand-swaziland-than/contactdata.php", 
+            "https://attitude-aruba-busy-blues.trycloudflare.com/contactdata.php", 
             {
                 method: "POST",
                 headers: {
