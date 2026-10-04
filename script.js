@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://extend-summer-pricing-agree.trycloudflare.com/contactdata.php", 
+            "https://underground-julian-prisoner-sister.trycloudflare.com/contactdata.php", 
             {
                 method: "POST",
                 headers: {
