@@ -35,7 +35,7 @@ form.addEventListener("submit", async function (event) {
     }
     try {
         const response = await fetch(
-            "https://invited-banner-subscriber-jungle.trycloudflare.com/contactdata.php", 
+            "https://integrate-lightning-postcards-savannah.trycloudflare.com/contactdata.php", 
             {
                 method: "POST",
                 headers: {
